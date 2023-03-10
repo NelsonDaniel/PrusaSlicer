@@ -5,6 +5,7 @@ prusaslicer_add_cmake_project(OCCT
 
     PATCH_COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_CURRENT_LIST_DIR}/occt_toolkit.cmake ./adm/cmake/
     CMAKE_ARGS
+      -DBUILD_USE_PCH=ON
         -DINSTALL_DIR_LAYOUT=Unix # LMBBS
         -DBUILD_LIBRARY_TYPE=Static
         -DUSE_TK=OFF
